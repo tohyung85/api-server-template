@@ -9,7 +9,7 @@ export default class Router {
   }
   public setupRoutes(app: Application): void {
     app.get("/", (req, res) => {
-      res.send("Hello World from TuesdayTen in a container!");
+      res.send("Hello World~!!!");
     });
     app.use("/auth", this.authRoutes.routes);
   }

@@ -18,13 +18,19 @@ Create an .env file with the following parameters:
 ```
 PORT='8080'
 RDS_HOSTNAME='db'
-RDS_USERNAME='admin'
-RDS_PASSWORD='password'
+RDS_USERNAME='YOUR USERNAME'
+RDS_PASSWORD='YOUR_PASSWORD'
 RDS_PORT='5432'
-RDS_DBNAME='my_app'
+RDS_DBNAME='YOUR DB NAME'
 ```
 
 For deployment run:
+
+```sh
+npm run install
+```
+
+followed by
 
 ```sh
 docker-compose up
