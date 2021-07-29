@@ -65,7 +65,7 @@ or
 yarn install
 ```
 
-For Deployment:
+For Deployment in a Docker Container:
 
 You will just need to run:
 
