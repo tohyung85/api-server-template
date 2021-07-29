@@ -12,8 +12,8 @@ Starter Template for Backend APIs configured with:
 - Nodemon
 - Dockerfile + Compose for Containerization
 
-To use:
-Create an .env file with the following parameters:
+Usage Instructions:
+\*Create an .env file with the following parameters:
 
 ```
 PORT='8080'
@@ -24,13 +24,40 @@ RDS_PORT='5432'
 RDS_DBNAME='YOUR DB NAME'
 ```
 
-For deployment run:
+For Development Use:
+This repository is set up for usage with VSCode Remote Container extension.
+The development container has been set up to create an isolated docker volume for storage and and editing of source code.
+This is to enable better disk write performance on Mac/Windows and also prevent file polution on your local file system.
 
-```sh
-npm run install
+1. Update 'my_app' to your custom app name in docker-compose.yml in .devcontainer folder:
+
+```
+  volumes:
+    # Update this to wherever you want VS Code to mount the folder of your project
+    - my_app:/usr/src/app
+
+volumes:
+  my_app:
 ```
 
-followed by
+2. In VSCode, Run command Remote Containers: Open Folder in Container...
+3. You can then do your development within the container
+
+Alternatively you can do your development without using any containers. In which case you will need to do an:
+
+```
+npm install
+```
+
+or
+
+```
+yarn install
+```
+
+For Deployment:
+
+You will just need to run:
 
 ```sh
 docker-compose up
