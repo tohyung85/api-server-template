@@ -49,7 +49,9 @@ ssh-add $HOME/.ssh/github_rsa
 
 \*Replace github_rsa with the name of your private key file
 
-More details can be found [here](https://code.visualstudio.com/docs/remote/containers#_using-ssh-keys) 3. In VSCode, Run command Remote Containers: Open Folder in Container... 4. You can then do your development within the container
+More details can be found [here](https://code.visualstudio.com/docs/remote/containers#_using-ssh-keys)
+
+3. In VSCode, Run command Remote Containers: Open Folder in Container... 4. You can then do your development within the container
 
 Alternatively you can do your development without using any containers. In which case you will need to do an:
 
