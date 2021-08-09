@@ -1,16 +1,16 @@
 import { Application } from "express";
-import AuthRoutes from "./modules/auth/routes";
+import UserRoutes from "./modules/users/routes";
 
 export default class Router {
-  private authRoutes: AuthRoutes;
+  private authRoutes: UserRoutes;
 
   constructor() {
-    this.authRoutes = new AuthRoutes();
+    this.authRoutes = new UserRoutes();
   }
   public setupRoutes(app: Application): void {
     app.get("/", (req, res) => {
       res.send("Hello World~!!!");
     });
-    app.use("/auth", this.authRoutes.routes);
+    app.use("/users", this.authRoutes.routes);
   }
 }

@@ -11,6 +11,7 @@ Starter Template for Backend APIs configured with:
 - Jest for testing
 - Nodemon
 - Dockerfile + Compose for Containerization
+- Authentication Routes with token refreh
 
 Usage Instructions:
 \*Create an .env file with the following parameters:
